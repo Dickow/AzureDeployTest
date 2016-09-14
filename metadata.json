@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "2ndC IDM",
+  "description": "Deploy the 2ndC IDM to Azure",
+  "summary": "Creates all resources required by the 2ndC IDM solution",
+  "githubUsername": "Dickow",
+  "dateUpdated": "2016-09-14"
+}
