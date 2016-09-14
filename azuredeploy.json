@@ -304,11 +304,11 @@
             "properties": {
                 "name": "[parameters('sites_IdentityManagementServices_name')]",
                 "hostNames": [
-                    "identitymanagementservices.azurewebsites.net"
+                    "[concat(parameters('sites_IdentityManagementServices_name'),'.azurewebsites.net')]"
                 ],
                 "enabledHostNames": [
-                    "identitymanagementservices.azurewebsites.net",
-                    "identitymanagementservices.scm.azurewebsites.net"
+                    "[concat(parameters('sites_IdentityManagementServices_name'),'.azurewebsites.net')]",
+                    "[concat(parameters('sites_IdentityManagementServices_name'),'.scm.azurewebsites.net')]"
                 ],
                 "hostNameSslStates": [
                     {
