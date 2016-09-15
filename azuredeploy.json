@@ -2,185 +2,38 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "components_identitymanagementservices_name": {
-            "defaultValue": "identitymanagementservices",
+        "stage_name": {
+            "defaultValue": "Test",
             "type": "String"
         },
-        "vaults_IDMKeyVault_name": {
-            "defaultValue": "IDMKeyVault",
-            "type": "String"
-        },
-        "namespaces_identitymanager_name": {
-            "defaultValue": "identitymanager",
-            "type": "String"
-        },
-        "storageAccounts_2ndcidentitymanagement_name": {
-            "defaultValue": "2ndcidentitymanagement",
-            "type": "String"
-        },
-        "serverfarms_IdentityManagementServicePlan_name": {
-            "defaultValue": "IdentityManagementServicePlan",
-            "type": "String"
-        },
-        "sites_IdentityManagementServices_name": {
-            "defaultValue": "IdentityManagementServices",
-            "type": "String"
-        },
-        "AuthorizationRules_RootManageSharedAccessKey_name": {
-            "defaultValue": "identitymanager/RootManageSharedAccessKey",
-            "type": "String"
-        },
-        "AuthorizationRules_CRMSendListen_name": {
-            "defaultValue": "identitymanager/CRMSendListen",
-            "type": "String"
-        },
-        "topics_distributionlistmemberships_name": {
-            "defaultValue": "identitymanager/distributionlistmemberships",
-            "type": "String"
-        },
-        "topics_distributionlists_name": {
-            "defaultValue": "identitymanager/distributionlists",
-            "type": "String"
-        },
-        "topics_domainimport_name": {
-            "defaultValue": "identitymanager/domainimport",
-            "type": "String"
-        },
-        "topics_groupmemberships_name": {
-            "defaultValue": "identitymanager/groupmemberships",
-            "type": "String"
-        },
-        "topics_groups_name": {
-            "defaultValue": "identitymanager/groups",
-            "type": "String"
-        },
-        "topics_licenseimport_name": {
-            "defaultValue": "identitymanager/licenseimport",
-            "type": "String"
-        },
-        "topics_licensemanagement_name": {
-            "defaultValue": "identitymanager/licensemanagement",
-            "type": "String"
-        },
-        "topics_manager_name": {
-            "defaultValue": "identitymanager/manager",
-            "type": "String"
-        },
-        "topics_o365groups_name": {
-            "defaultValue": "identitymanager/o365groups",
-            "type": "String"
-        },
-        "topics_sharedmailboxes_name": {
-            "defaultValue": "identitymanager/sharedmailboxes",
-            "type": "String"
-        },
-        "topics_sharedmailboxmemberships_name": {
-            "defaultValue": "identitymanager/sharedmailboxmemberships",
-            "type": "String"
-        },
-        "topics_sharepoint_name": {
-            "defaultValue": "identitymanager/sharepoint",
-            "type": "String"
-        },
-        "topics_sharepointba_name": {
-            "defaultValue": "identitymanager/sharepointba",
-            "type": "String"
-        },
-        "topics_sharepointdiscovery_name": {
-            "defaultValue": "identitymanager/sharepointdiscovery",
-            "type": "String"
-        },
-        "topics_sharepointrfm_name": {
-            "defaultValue": "identitymanager/sharepointrfm",
-            "type": "String"
-        },
-        "topics_users_name": {
-            "defaultValue": "identitymanager/users",
-            "type": "String"
-        },
-        "topics_usersystems_name": {
-            "defaultValue": "identitymanager/usersystems",
-            "type": "String"
-        },
-        "subscriptions_idm_distributionlistmemberships_name": {
-            "defaultValue": "identitymanager/distributionlistmemberships/idm-distributionlistmemberships",
-            "type": "String"
-        },
-        "subscriptions_idm_distributionlists_name": {
-            "defaultValue": "identitymanager/distributionlists/idm-distributionlists",
-            "type": "String"
-        },
-        "subscriptions_idm_domainimports_name": {
-            "defaultValue": "identitymanager/domainimport/idm-domainimports",
-            "type": "String"
-        },
-        "subscriptions_idm_groupmembership_name": {
-            "defaultValue": "identitymanager/groupmemberships/idm-groupmembership",
-            "type": "String"
-        },
-        "subscriptions_idm_usergroups_name": {
-            "defaultValue": "identitymanager/groups/idm-usergroups",
-            "type": "String"
-        },
-        "subscriptions_idm_licenseimport_name": {
-            "defaultValue": "identitymanager/licenseimport/idm-licenseimport",
-            "type": "String"
-        },
-        "subscriptions_idm_licensemanagement_name": {
-            "defaultValue": "identitymanager/licensemanagement/idm-licensemanagement",
-            "type": "String"
-        },
-        "subscriptions_idm_manager_name": {
-            "defaultValue": "identitymanager/manager/idm-manager",
-            "type": "String"
-        },
-        "subscriptions_idm_sharedmailboxes_name": {
-            "defaultValue": "identitymanager/sharedmailboxes/idm-sharedmailboxes",
-            "type": "String"
-        },
-        "subscriptions_idm_sharedmailboxmemberships_name": {
-            "defaultValue": "identitymanager/sharedmailboxmemberships/idm-sharedmailboxmemberships",
-            "type": "String"
-        },
-        "subscriptions_idm_sharepoint_name": {
-            "defaultValue": "identitymanager/sharepoint/idm-sharepoint",
-            "type": "String"
-        },
-        "subscriptions_idm_sharepoint_name_1": {
-            "defaultValue": "identitymanager/sharepointba/idm-sharepoint",
-            "type": "String"
-        },
-        "subscriptions_idm_sharepointdiscovery_name": {
-            "defaultValue": "identitymanager/sharepointdiscovery/idm-sharepointdiscovery",
-            "type": "String"
-        },
-        "subscriptions_idm_sharepoint_name_2": {
-            "defaultValue": "identitymanager/sharepointrfm/idm-sharepoint",
-            "type": "String"
-        },
-        "subscriptions_idm_users_name": {
-            "defaultValue": "identitymanager/users/idm-users",
-            "type": "String"
-        },
-        "subscriptions_idm_usersystems_name": {
-            "defaultValue": "identitymanager/usersystems/idm-usersystems",
+        "company_name":{
+            "defaultValue": "2ndC" ,
             "type": "String"
         }
     },
-    "variables": {},
+    "variables": {
+        "servicePlan": "[concat(parameters('stage_name'), parameters(company_name), '2ndCIDMServicePlan')]",
+        "appServiceName": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMAppService']",
+        "keyVaultName": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMKeyVault')]",
+        "cloudStorageName": "[concat(paramaters('stage_name'), parameters('company_name'), '2ndCIDMCloudStorage')]",
+        "serviceBusName": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMServiceBus']",
+        "applicationInsightsName": "[concat(parameters('stage_name'), paramaters('company_name'), '2ndCIDMInsights')]",
+        "rootAccessKey": "[concat(variables('serviceBusName'), '/RootManageSharedAccessKey')]",
+        "crmAccessKey": "[concat(variables('serviceBusName'), 'CRMSendListen')]"
+    },
     "resources": [
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourceGroups/IdentityManagementResources/providers/microsoft.insights/components/identitymanagementservices'.",
             "type": "microsoft.insights/components",
             "kind": "web",
-            "name": "[parameters('components_identitymanagementservices_name')]",
+            "name": "[variables('applicationInsightsName')]",
             "apiVersion": "2014-04-01",
             "location": "Central US",
             "tags": {
                 "hidden-link:/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourceGroups/IdentityManagementResources/providers/Microsoft.Web/sites/IdentityManagementServices": "Resource"
             },
             "properties": {
-                "ApplicationId": "[parameters('components_identitymanagementservices_name')]"
+                "ApplicationId": "[variables('applicationInsightsName')]"
             },
             "resources": [],
             "dependsOn": []
@@ -188,7 +41,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourceGroups/IdentityManagementResources/providers/Microsoft.KeyVault/vaults/IDMKeyVault'.",
             "type": "Microsoft.KeyVault/vaults",
-            "name": "[parameters('vaults_IDMKeyVault_name')]",
+            "name": "[variables('keyVaultName')]",
             "apiVersion": "2015-06-01",
             "location": "West Europe",
             "tags": {},
@@ -241,7 +94,7 @@
                 "tier": "Standard"
             },
             "kind": "Messaging",
-            "name": "[parameters('namespaces_identitymanager_name')]",
+            "name": "[variables('serviceBusName')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "tags": {},
@@ -249,7 +102,7 @@
                 "provisioningState": "Succeeded",
                 "status": "Active",
                 "createdAt": "2016-07-04T09:30:49.153Z",
-                "serviceBusEndpoint": "[concat('https://', parameters('namespaces_identitymanager_name'),'.servicebus.windows.net:443/')]",
+                "serviceBusEndpoint": "[concat('https://', variables('serviceBusName'),'.servicebus.windows.net:443/')]",
                 "enabled": true,
                 "updatedAt": "2016-09-14T10:37:19.033Z"
             },
@@ -264,7 +117,7 @@
                 "tier": "Standard"
             },
             "kind": "Storage",
-            "name": "[parameters('storageAccounts_2ndcidentitymanagement_name')]",
+            "name": "[variables('cloudStorageName')]",
             "apiVersion": "2016-01-01",
             "location": "westeurope",
             "tags": {},
@@ -282,11 +135,11 @@
                 "family": "S",
                 "capacity": 1
             },
-            "name": "[parameters('serverfarms_IdentityManagementServicePlan_name')]",
+            "name": "[variables('servicePlan')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
-                "name": "[parameters('serverfarms_IdentityManagementServicePlan_name')]",
+                "name": "[variables('servicePlan')]",
                 "numberOfWorkers": 1
             },
             "resources": [],
@@ -295,46 +148,46 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourceGroups/IdentityManagementResources/providers/Microsoft.Web/sites/IdentityManagementServices'.",
             "type": "Microsoft.Web/sites",
-            "name": "[parameters('sites_IdentityManagementServices_name')]",
+            "name": "[variables('appServiceName')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "tags": {
                 "hidden-related:/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.Web/serverfarms/IdentityManagementServicePlan": "empty"
             },
             "properties": {
-                "name": "[parameters('sites_IdentityManagementServices_name')]",
+                "name": "[variables('appServiceName')]",
                 "hostNames": [
-                    "[concat(parameters('sites_IdentityManagementServices_name'),'.azurewebsites.net')]"
+                    "[concat(variables('appServiceName'),'.azurewebsites.net')]"
                 ],
                 "enabledHostNames": [
-                    "[concat(parameters('sites_IdentityManagementServices_name'),'.azurewebsites.net')]",
-                    "[concat(parameters('sites_IdentityManagementServices_name'),'.scm.azurewebsites.net')]"
+                    "[concat(variables('appServiceName'),'.azurewebsites.net')]",
+                    "[concat(variables('appServiceName'),'.scm.azurewebsites.net')]"
                 ],
                 "hostNameSslStates": [
                     {
-                        "name": "[concat(parameters('sites_IdentityManagementServices_name'),'identitymanagementservices.azurewebsites.net')]",
+                        "name": "[concat(variables('appServiceName'),'identitymanagementservices.azurewebsites.net')]",
                         "sslState": 0,
                         "thumbprint": null,
                         "ipBasedSslState": 0
                     },
                     {
-                        "name": "[concat(parameters('sites_IdentityManagementServices_name'),'identitymanagementservices.scm.azurewebsites.net')]",
+                        "name": "[concat(variables('appServiceName'),'identitymanagementservices.scm.azurewebsites.net')]",
                         "sslState": 0,
                         "thumbprint": null,
                         "ipBasedSslState": 0
                     }
                 ],
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_IdentityManagementServicePlan_name'))]"
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlan'))]"
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_IdentityManagementServicePlan_name'))]"
+                "[resourceId('Microsoft.Web/serverfarms', variables('servicePlan'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/AuthorizationRules/RootManageSharedAccessKey'.",
             "type": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
-            "name": "[parameters('AuthorizationRules_RootManageSharedAccessKey_name')]",
+            "name": "[variables('rootAccessKey')]",
             "apiVersion": "2015-08-01",
             "properties": {
                 "rights": [
@@ -345,29 +198,28 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/AuthorizationRules/CRMSendListen'.",
             "type": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
-            "name": "[parameters('AuthorizationRules_CRMSendListen_name')]",
+            "name": "[variables('crmAccessKey')]",
             "apiVersion": "2015-08-01",
             "properties": {
                 "rights": [
-                    "Send",
-                    "Listen"
+                    "Send"
                 ]
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/distributionlistmemberships'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_distributionlistmemberships_name')]",
+            "name": "identitymanager/distributionlistmemberships",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -399,13 +251,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/distributionlists'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_distributionlists_name')]",
+            "name": "identitymanager/distributionlists",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -437,13 +289,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/domainimport'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_domainimport_name')]",
+            "name": "identitymanager/domainimport",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -475,13 +327,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/groupmemberships'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_groupmemberships_name')]",
+            "name": "identitymanager/groupmemberships",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -513,13 +365,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/groups'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_groups_name')]",
+            "name": "identitymanager/groups",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -551,13 +403,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/licenseimport'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_licenseimport_name')]",
+            "name": "identitymanager/licenseimport",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -589,13 +441,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/licensemanagement'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_licensemanagement_name')]",
+            "name": "identitymanager/licensemanagement",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -627,13 +479,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/manager'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_manager_name')]",
+            "name": "identitymanager/manager",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -665,13 +517,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/o365groups'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_o365groups_name')]",
+            "name": "identitymanager/o365groups",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -703,13 +555,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharedmailboxes'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_sharedmailboxes_name')]",
+            "name": "identitymanager/sharedmailboxes",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -741,13 +593,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharedmailboxmemberships'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_sharedmailboxmemberships_name')]",
+            "name": "identitymanager/sharedmailboxmemberships",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -779,13 +631,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepoint'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_sharepoint_name')]",
+            "name": "identitymanager/sharepoint",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -817,51 +669,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepointba'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_sharepointba_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "defaultMessageTimeToLive": "14.00:00:00",
-                "maxSizeInMegabytes": 16384,
-                "requiresDuplicateDetection": false,
-                "enableBatchedOperations": true,
-                "sizeInBytes": 36482,
-                "filteringMessagesBeforePublishing": false,
-                "isAnonymousAccessible": false,
-                "status": "Active",
-                "createdAt": "2016-09-07T11:44:21.46Z",
-                "updatedAt": "2016-09-07T11:44:21.85Z",
-                "accessedAt": "2016-09-08T12:46:29.677Z",
-                "supportOrdering": false,
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "subscriptionCount": 1,
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "enablePartitioning": true,
-                "isExpress": false,
-                "enableSubscriptionPartitioning": false,
-                "enableExpress": false
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepointdiscovery'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_sharepointdiscovery_name')]",
+            "name": "identitymanager/sharepointdiscovery",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -893,51 +707,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepointrfm'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_sharepointrfm_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "defaultMessageTimeToLive": "14.00:00:00",
-                "maxSizeInMegabytes": 16384,
-                "requiresDuplicateDetection": false,
-                "enableBatchedOperations": true,
-                "sizeInBytes": 36423,
-                "filteringMessagesBeforePublishing": false,
-                "isAnonymousAccessible": false,
-                "status": "Active",
-                "createdAt": "2016-09-07T11:44:08.9545675Z",
-                "updatedAt": "2016-09-07T11:44:11.977Z",
-                "accessedAt": "2016-09-14T11:43:06.4121832Z",
-                "supportOrdering": false,
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "subscriptionCount": 1,
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "enablePartitioning": true,
-                "isExpress": false,
-                "enableSubscriptionPartitioning": false,
-                "enableExpress": false
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/users'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_users_name')]",
+            "name": "identitymanager/users",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -969,13 +745,13 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/usersystems'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "[parameters('topics_usersystems_name')]",
+            "name": "identitymanager/usersystems",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -1007,567 +783,7 @@
             },
             "resources": [],
             "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/distributionlistmemberships/subscriptions/idm-distributionlistmemberships'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_distributionlistmemberships_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 7,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-08-22T08:07:06.589456Z",
-                "updatedAt": "2016-08-22T08:07:09.7281379Z",
-                "accessedAt": "2016-09-14T11:42:41.5347915Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 7,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_distributionlistmemberships_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/distributionlists/subscriptions/idm-distributionlists'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_distributionlists_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 1,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-08-22T08:07:05.8771205Z",
-                "updatedAt": "2016-08-22T08:07:08.0222945Z",
-                "accessedAt": "2016-09-14T11:42:40.7504355Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 1,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_distributionlists_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/domainimport/subscriptions/idm-domainimports'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_domainimports_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-08-26T08:02:40.0817614Z",
-                "updatedAt": "2016-08-26T08:02:41.4853068Z",
-                "accessedAt": "2016-09-14T11:42:55.6684019Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_domainimport_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/groupmemberships/subscriptions/idm-groupmembership'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_groupmembership_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-07-28T06:23:02.0198125Z",
-                "updatedAt": "2016-07-28T06:23:03.9342439Z",
-                "accessedAt": "2016-09-14T11:42:47.8577387Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_groupmemberships_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/groups/subscriptions/idm-usergroups'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_usergroups_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-07-28T06:23:01.0652468Z",
-                "updatedAt": "2016-07-28T06:23:02.6537369Z",
-                "accessedAt": "2016-09-14T11:42:45.9236512Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_groups_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/licenseimport/subscriptions/idm-licenseimport'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_licenseimport_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-08-05T08:12:07.8689774Z",
-                "updatedAt": "2016-08-05T08:12:10.1762912Z",
-                "accessedAt": "2016-09-14T11:42:49.4560657Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_licenseimport_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/licensemanagement/subscriptions/idm-licensemanagement'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_licensemanagement_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 4,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-08-08T10:47:38.2215521Z",
-                "updatedAt": "2016-08-08T10:47:40.7466115Z",
-                "accessedAt": "2016-09-14T11:42:50.3476956Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 4,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_licensemanagement_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/manager/subscriptions/idm-manager'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_manager_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-09-08T06:37:16.6846614Z",
-                "updatedAt": "2016-09-08T06:37:18.4825469Z",
-                "accessedAt": "2016-09-14T11:42:58.6237323Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_manager_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharedmailboxes/subscriptions/idm-sharedmailboxes'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_sharedmailboxes_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-08-22T08:12:42.0898919Z",
-                "updatedAt": "2016-08-22T08:12:45.2248764Z",
-                "accessedAt": "2016-09-14T11:42:42.7206058Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_sharedmailboxes_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharedmailboxmemberships/subscriptions/idm-sharedmailboxmemberships'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_sharedmailboxmemberships_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 5,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-08-22T08:12:43.6528175Z",
-                "updatedAt": "2016-08-22T08:12:46.7929815Z",
-                "accessedAt": "2016-09-14T11:42:44.3663488Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 5,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_sharedmailboxmemberships_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepoint/subscriptions/idm-sharepoint'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_sharepoint_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-09-09T07:45:27.6482087Z",
-                "updatedAt": "2016-09-09T07:45:29.3519623Z",
-                "accessedAt": "2016-09-13T06:57:38.953Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_sharepoint_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepointba/subscriptions/idm-sharepoint'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_sharepoint_name_1')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 2,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-09-07T11:51:12.4239762Z",
-                "updatedAt": "2016-09-07T11:51:15.1229733Z",
-                "accessedAt": "2016-09-08T12:46:29.677Z",
-                "countDetails": {
-                    "activeMessageCount": 1,
-                    "deadLetterMessageCount": 1,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_sharepointba_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepointdiscovery/subscriptions/idm-sharepointdiscovery'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_sharepointdiscovery_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 0,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-09-06T13:35:54.0930434Z",
-                "updatedAt": "2016-09-06T13:35:56.3741751Z",
-                "accessedAt": "2016-09-14T11:42:53.9330351Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 0,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_sharepointdiscovery_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepointrfm/subscriptions/idm-sharepoint'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_sharepoint_name_2')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 2,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-09-07T11:57:23.9176175Z",
-                "updatedAt": "2016-09-07T11:57:26.2301604Z",
-                "accessedAt": "2016-09-14T11:43:06.4121832Z",
-                "countDetails": {
-                    "activeMessageCount": 1,
-                    "deadLetterMessageCount": 1,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_sharepointrfm_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/users/subscriptions/idm-users'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_users_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 2,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-07-06T07:27:07.1125661Z",
-                "updatedAt": "2016-07-06T07:27:09.8741847Z",
-                "accessedAt": "2016-09-14T11:42:56.2704229Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 2,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_users_name'))]"
-            ]
-        },
-        {
-            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/usersystems/subscriptions/idm-usersystems'.",
-            "type": "Microsoft.ServiceBus/namespaces/topics/subscriptions",
-            "name": "[parameters('subscriptions_idm_usersystems_name')]",
-            "apiVersion": "2015-08-01",
-            "location": "West Europe",
-            "properties": {
-                "lockDuration": "00:01:00",
-                "requiresSession": false,
-                "defaultMessageTimeToLive": "10675199.02:48:05.4775807",
-                "deadLetteringOnMessageExpiration": false,
-                "deadLetteringOnFilterEvaluationExceptions": true,
-                "messageCount": 1,
-                "maxDeliveryCount": 10,
-                "enableBatchedOperations": true,
-                "status": "Active",
-                "createdAt": "2016-07-07T14:16:40.8719839Z",
-                "updatedAt": "2016-07-07T14:16:40.8719839Z",
-                "accessedAt": "2016-09-14T11:42:14.5314875Z",
-                "countDetails": {
-                    "activeMessageCount": 0,
-                    "deadLetterMessageCount": 1,
-                    "scheduledMessageCount": 0,
-                    "transferMessageCount": 0,
-                    "transferDeadLetterMessageCount": 0
-                },
-                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
-                "entityAvailabilityStatus": "Available"
-            },
-            "resources": [],
-            "dependsOn": [
-                "[resourceId('Microsoft.ServiceBus/namespaces', parameters('namespaces_identitymanager_name'))]",
-                "[resourceId('Microsoft.ServiceBus/namespaces/topics', parameters('topics_usersystems_name'))]"
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
             ]
         }
     ]
