@@ -51,36 +51,7 @@
                     "name": "Standard"
                 },
                 "tenantId": "ced97294-935e-4250-a067-5960109f4c09",
-                "accessPolicies": [
-                    {
-                        "tenantId": "ced97294-935e-4250-a067-5960109f4c09",
-                        "objectId": "ecaf90ce-ab07-4528-95db-c2d8fa22bce4",
-                        "permissions": {
-                            "keys": [
-                                "get",
-                                "create",
-                                "delete",
-                                "list",
-                                "update",
-                                "import",
-                                "backup",
-                                "restore"
-                            ],
-                            "secrets": [
-                                "all"
-                            ]
-                        }
-                    },
-                    {
-                        "tenantId": "ced97294-935e-4250-a067-5960109f4c09",
-                        "objectId": "4314f180-c47e-4f3d-94b9-e74b37208e55",
-                        "permissions": {
-                            "secrets": [
-                                "all"
-                            ]
-                        }
-                    }
-                ],
+                "accessPolicies": [],
                 "enabledForDeployment": false
             },
             "resources": [],
