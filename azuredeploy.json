@@ -19,7 +19,7 @@
         "serviceBusName": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMServiceBus')]",
         "applicationInsightsName": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMInsights')]",
         "rootAccessKey": "[concat(variables('serviceBusName'), '/RootManageSharedAccessKey')]",
-        "crmAccessKey": "[concat(variables('serviceBusName'), 'CRMSendListen')]"
+        "crmAccessKey": "[concat(variables('serviceBusName'), '/CRMSendListen')]"
     },
     "resources": [
         {
