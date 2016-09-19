@@ -119,7 +119,7 @@
             "kind": "Storage",
             "name": "[variables('cloudStorageName')]",
             "apiVersion": "2016-01-01",
-            "location": "westeurope",
+            "location": "West Europe",
             "tags": {},
             "properties": {},
             "resources": [],
