@@ -12,7 +12,7 @@
         }
     },
     "variables": {
-        "servicePlan": "[concat(parameters('stage_name'), parameters(company_name), '2ndCIDMAppServicePlan')]",
+        "servicePlan": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMAppServicePlan')]",
         "appServiceName": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMAppService']",
         "keyVaultName": "[concat(parameters('stage_name'), parameters('company_name'), '2ndCIDMKeyVault')]",
         "cloudStorageName": "[concat(paramaters('stage_name'), parameters('company_name'), '2ndCIDMCloudStorage')]",
