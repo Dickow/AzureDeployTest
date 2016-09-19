@@ -219,7 +219,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/distributionlistmemberships'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/distributionlistmemberships",
+            "name": "[concat(variables('serviceBusName'), '/distributionlistmemberships')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -257,7 +257,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/distributionlists'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/distributionlists",
+            "name": "[concat(variables('serviceBusName'), '/distributionlists')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -295,7 +295,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/domainimport'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/domainimport",
+            "name": "[concat(variables('serviceBusName'), '/domainimport')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -333,7 +333,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/groupmemberships'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/groupmemberships",
+            "name": "[concat(variables('serviceBusName'), '/groupmemberships')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -371,7 +371,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/groups'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/groups",
+            "name": "[concat(variables('serviceBusName'), '/groups')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -409,7 +409,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/licenseimport'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/licenseimport",
+            "name": "[concat(variables('serviceBusName'), '/licenseimport')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -447,7 +447,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/licensemanagement'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/licensemanagement",
+            "name": "[concat(variables('serviceBusName'), '/licensemanagement')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -485,7 +485,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/manager'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/manager",
+            "name": "[concat(variables('serviceBusName'), '/manager')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -523,7 +523,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/o365groups'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/o365groups",
+            "name": "[concat(variables('serviceBusName'), '/o365groups')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -561,7 +561,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharedmailboxes'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/sharedmailboxes",
+            "name": "[concat(variables('serviceBusName'), '/sharedmailboxes')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -599,7 +599,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharedmailboxmemberships'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/sharedmailboxmemberships",
+            "name": "[concat(variables('serviceBusName'), '/sharedmailboxmemberships')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -637,7 +637,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepoint'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/sharepoint",
+            "name": "[concat(variables('serviceBusName'), '/sharepoint')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -675,7 +675,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharepointdiscovery'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/sharepointdiscovery",
+            "name": "[concat(variables('serviceBusName'), '/sharepointdiscovery')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -713,7 +713,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/users'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/users",
+            "name": "[concat(variables('serviceBusName'), '/users')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
@@ -751,7 +751,7 @@
         {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/usersystems'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
-            "name": "identitymanager/usersystems",
+            "name": "[concat(variables('serviceBusName'), '/usersystems')]",
             "apiVersion": "2015-08-01",
             "location": "West Europe",
             "properties": {
