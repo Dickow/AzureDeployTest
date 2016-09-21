@@ -530,6 +530,44 @@
             ]
         },
         {
+            "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/o365groupmemberships'.",
+            "type": "Microsoft.ServiceBus/namespaces/topics",
+            "name": "[concat(variables('serviceBusName'), '/o365groupmemberships')]",
+            "apiVersion": "2015-08-01",
+            "location": "West Europe",
+            "properties": {
+                "defaultMessageTimeToLive": "14.00:00:00",
+                "maxSizeInMegabytes": 1024,
+                "requiresDuplicateDetection": false,
+                "enableBatchedOperations": true,
+                "sizeInBytes": 19033,
+                "filteringMessagesBeforePublishing": false,
+                "isAnonymousAccessible": false,
+                "status": "Active",
+                "createdAt": "2016-08-19T08:47:31.5683534Z",
+                "updatedAt": "2016-08-19T08:47:34.403Z",
+                "accessedAt": "2016-09-14T11:42:40.7504355Z",
+                "supportOrdering": false,
+                "countDetails": {
+                    "activeMessageCount": 0,
+                    "deadLetterMessageCount": 0,
+                    "scheduledMessageCount": 0,
+                    "transferMessageCount": 0,
+                    "transferDeadLetterMessageCount": 0
+                },
+                "subscriptionCount": 1,
+                "autoDeleteOnIdle": "10675199.02:48:05.4775807",
+                "enablePartitioning": true,
+                "isExpress": false,
+                "enableSubscriptionPartitioning": false,
+                "enableExpress": false
+            },
+            "resources": [],
+            "dependsOn": [
+                "[resourceId('Microsoft.ServiceBus/namespaces', variables('serviceBusName'))]"
+            ]
+        },
+        {
             "comments": "Generalized from resource: '/subscriptions/c41d864a-e5a8-43f7-b01a-8ca8af4dc86f/resourcegroups/IdentityManagementResources/providers/Microsoft.ServiceBus/namespaces/identitymanager/topics/sharedmailboxes'.",
             "type": "Microsoft.ServiceBus/namespaces/topics",
             "name": "[concat(variables('serviceBusName'), '/sharedmailboxes')]",
