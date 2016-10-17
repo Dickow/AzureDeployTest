@@ -12,12 +12,12 @@
         }
     },
     "variables": {
-        "servicePlan": "[concat(parameters('stage_name'), parameters('company_name'), 'idmappserviceplan')]",
-        "appServiceName": "[concat(parameters('stage_name'), parameters('company_name'), 'idmappservice')]",
-        "keyVaultName": "[concat(parameters('stage_name'), parameters('company_name'), 'idmvault')]",
-        "cloudStorageName": "[concat(parameters('stage_name'), parameters('company_name'), 'idmstorage')]",
-        "serviceBusName": "[concat(parameters('stage_name'), parameters('company_name'), 'idmservicebus')]",
-        "applicationInsightsName": "[concat(parameters('stage_name'), parameters('company_name'), 'idminsights')]",
+        "servicePlan": "[concat('ccs', parameters('company_name'), parameters('stage_name'), 'appserviceplan')]",
+        "appServiceName": "[concat('ccs', parameters('company_name'), parameters('stage_name'), 'appservice')]",
+        "keyVaultName": "[concat('ccs', parameters('company_name'), parameters('stage_name'), 'vault')]",
+        "cloudStorageName": "[concat('ccs', parameters('company_name'), parameters('stage_name'), 'storage')]",
+        "serviceBusName": "[concat('ccs', parameters('company_name'), parameters('stage_name'), 'servicebus')]",
+        "applicationInsightsName": "[concat('ccs', parameters('company_name'), parameters('stage_name'), 'insights')]",
         "rootAccessKey": "[concat(variables('serviceBusName'), '/RootManageSharedAccessKey')]",
         "crmAccessKey": "[concat(variables('serviceBusName'), '/CRMSendListen')]"
     },
